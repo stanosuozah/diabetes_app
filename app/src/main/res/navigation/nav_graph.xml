@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.jhealth.diabetesapp.presentation.onboarding_auth.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" >
+        <argument
+            android:name="args"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_authFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.jhealth.diabetesapp.presentation.onboarding_auth.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.jhealth.diabetesapp.presentation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_homeFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_recipeDetailsFragment"
+            app:destination="@id/recipeDetailsFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_accountProfileFragment"
+            app:destination="@id/accountProfileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_forumPostDetailFragment"
+            app:destination="@id/forumPostDetailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/articleHomeFragment"
+        android:name="com.jhealth.diabetesapp.presentation.article.ArticleHomeFragment"
+        android:label="fragment_article_home"
+        tools:layout="@layout/fragment_article_home" >
+        <action
+            android:id="@+id/action_articleHomeFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.jhealth.diabetesapp.presentation.article.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article" >
+        <argument
+            android:name="args"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailsFragment"
+        android:name="com.jhealth.diabetesapp.presentation.recipe.RecipeDetailsFragment"
+        android:label="fragment_recipe_details"
+        tools:layout="@layout/fragment_recipe_details" >
+
+        <argument
+            android:name="args"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_recipeDetailsFragment_to_recipeDemoFragment"
+            app:destination="@id/recipeDemoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.jhealth.diabetesapp.presentation.recipe.RecipesFragment"
+        android:label="fragment_recipes"
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_recipesFragment_to_recipeDetailsFragment"
+            app:destination="@id/recipeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forumFragment"
+        android:name="com.jhealth.diabetesapp.presentation.forum.ForumFragment"
+        android:label="fragment_forum"
+        tools:layout="@layout/fragment_forum" >
+        <action
+            android:id="@+id/action_forumFragment_to_forumPostDetailFragment"
+            app:destination="@id/forumPostDetailFragment" />
+        <action
+            android:id="@+id/action_forumFragment_to_addPostFragment"
+            app:destination="@id/addPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forumPostDetailFragment"
+        android:name="com.jhealth.diabetesapp.presentation.forum.ForumPostDetailFragment"
+        android:label="fragment_forum_post_detail"
+        tools:layout="@layout/fragment_forum_post_detail" >
+        <argument
+            android:name="args"
+            app:argType="com.jhealth.diabetesapp.domain.model.Posts" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountProfileFragment"
+        android:name="com.jhealth.diabetesapp.presentation.account.AccountProfileFragment"
+        android:label="fragment_account_profile"
+        tools:layout="@layout/fragment_account_profile" >
+        <action
+            android:id="@+id/action_accountProfileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_accountProfileFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.jhealth.diabetesapp.presentation.account.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.jhealth.diabetesapp.presentation.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_forumPostDetailFragment"
+            app:destination="@id/forumPostDetailFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_recipeDetailsFragment"
+            app:destination="@id/recipeDetailsFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="com.jhealth.diabetesapp.presentation.forum.AddPostFragment"
+        android:label="fragment_add_post"
+        tools:layout="@layout/fragment_add_post" />
+    <action
+        android:id="@+id/action_global_searchFragment"
+        app:destination="@id/searchFragment"
+        app:launchSingleTop="true" />
+    <fragment
+        android:id="@+id/recipeDemoFragment"
+        android:name="com.jhealth.diabetesapp.presentation.recipe.RecipeDemoFragment"
+        android:label="fragment_recipe_demo"
+        tools:layout="@layout/fragment_recipe_demo" >
+        <argument
+            android:name="args"
+            app:argType="string" />
+    </fragment>
+</navigation>

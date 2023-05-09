@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Diabetes App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="view_type">
+        <item>Article</item>
+        <item>Recipe</item>
+        <item>Post</item>
+    </string-array>
+    <string-array name="sort_order">
+        <item>Descending</item>
+        <item>Ascending</item>
+    </string-array>
+</resources>

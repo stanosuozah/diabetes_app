@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home"
+        android:icon="@drawable/home_icon"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/articleHomeFragment"
+        android:title="Article"
+        android:icon="@drawable/article_icon"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/recipesFragment"
+        android:title="Recipes"
+        android:icon="@drawable/meal_icon"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/forumFragment"
+        android:title="Forum"
+        android:icon="@drawable/forum_icon"
+        app:showAsAction="always"
+        />
+</menu>

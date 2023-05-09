@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "209220853449",
+    "project_id": "diabetes-app-58a30",
+    "storage_bucket": "diabetes-app-58a30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209220853449:android:f9255813747fba3c23f718",
+        "android_client_info": {
+          "package_name": "com.jhealth.diabetesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209220853449-qm7haneqb8mul784l0bq262b6mvnard0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhGS071MOnX4fTUbEKmoQH8UITw1lOEF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209220853449-qm7haneqb8mul784l0bq262b6mvnard0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
